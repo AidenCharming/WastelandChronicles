@@ -1,7 +1,7 @@
 extends Camera2D
 
 @export var move_speed: float = 200.0
-@export var drag_sensitivity: float = 1.0
+@export var drag_sensitivity: float = 50.0
 
 var is_dragging: bool = false
 var last_mouse_position: Vector2 = Vector2.ZERO
@@ -39,7 +39,7 @@ func handle_mouse_drag(delta: float) -> void:
 		var mouse_delta = last_mouse_position - mouse_position
 		
 		if mouse_delta != Vector2.ZERO:
-			position += mouse_delta * drag_sensitivity
+			position += mouse_delta * drag_sensitivity * delta
 			last_mouse_position = mouse_position
 
 func _ready() -> void:

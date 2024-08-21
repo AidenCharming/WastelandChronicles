@@ -6,6 +6,7 @@ export_presets.cfg
 
 # Avoid tracking the main project file
 project.godot
+*.godot
 
 # System specific files
 .DS_Store
