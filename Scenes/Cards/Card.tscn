@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://b36b8cfljhchh"]
+
+[ext_resource type="Texture2D" uid="uid://kqcm03tbso5l" path="res://Assets/Textures/Cards/SurvivorCard.png" id="1_2dxnb"]
+[ext_resource type="Script" path="res://Scripts/Managers/card.gd" id="2_4rjn4"]
+[ext_resource type="Texture2D" uid="uid://daeylrn2my8ql" path="res://Assets/Textures/Cards/SurvivorPortrait2.png" id="2_jyyco"]
+[ext_resource type="Theme" uid="uid://bmtaahptfre60" path="res://Assets/Themes/new_theme.tres" id="3_nft82"]
+[ext_resource type="FontFile" uid="uid://dpvuxjx7p4h0g" path="res://Assets/Fonts/Apocalypse.ttf" id="5_n16ew"]
+
+[node name="Control" type="Control"]
+z_index = 5
+layout_mode = 3
+anchor_left = 0.468
+anchor_top = 0.414
+anchor_right = 0.468
+anchor_bottom = 0.414
+offset_left = -22.5601
+offset_top = -36.12
+offset_right = 94.4399
+offset_bottom = 126.88
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 13
+
+[node name="SurvivorCard" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(59, 81)
+scale = Vector2(0.181538, 0.181538)
+texture = ExtResource("1_2dxnb")
+script = ExtResource("2_4rjn4")
+card_name = null
+card_type = null
+attributes = null
+
+[node name="SurvivorPortrait" type="Sprite2D" parent="SurvivorCard"]
+z_index = -1
+position = Vector2(0, 27.5425)
+scale = Vector2(0.753552, 0.690518)
+texture = ExtResource("2_jyyco")
+
+[node name="NameLabel" type="Label" parent="SurvivorCard"]
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 0.131
+offset_left = -281.0
+offset_top = -402.0
+offset_right = -61.0
+offset_bottom = -441.817
+theme = ExtResource("3_nft82")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_n16ew")
+theme_override_font_sizes/font_size = 75
+text = "Survivor"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
