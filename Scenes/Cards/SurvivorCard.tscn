@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://b36b8cfljhchh"]
+
+[ext_resource type="Texture2D" uid="uid://347pmgb240yh" path="res://Assets/Textures/Cards/SurvivorCard.png" id="1_2dxnb"]
+[ext_resource type="Texture2D" uid="uid://c3ojrlceenn5q" path="res://Assets/Textures/Cards/SurvivorPortrait2.png" id="2_jyyco"]
+[ext_resource type="Theme" uid="uid://bmtaahptfre60" path="res://Assets/Themes/new_theme.tres" id="3_nft82"]
+
+[node name="SurvivorCard" type="Sprite2D"]
+z_index = 1
+position = Vector2(1288, 621)
+scale = Vector2(0.181538, 0.181538)
+texture = ExtResource("1_2dxnb")
+
+[node name="SurvivorPortrait" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-0.000163555, 27.5425)
+scale = Vector2(0.753552, 0.690518)
+texture = ExtResource("2_jyyco")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 0.131
+offset_left = -237.0
+offset_top = -397.0
+offset_right = -88.0
+offset_bottom = -454.817
+theme = ExtResource("3_nft82")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Survivor"
+horizontal_alignment = 1

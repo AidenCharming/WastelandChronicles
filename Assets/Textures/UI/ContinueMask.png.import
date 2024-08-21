@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dro20vyw5y7t5"
+path="res://.godot/imported/ContinueMask.png-2b6f24d66ac7e15c0c618169d31a7411.res"
+
+[deps]
+
+source_file="res://Assets/Textures/UI/ContinueMask.png"
+dest_files=["res://.godot/imported/ContinueMask.png-2b6f24d66ac7e15c0c618169d31a7411.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

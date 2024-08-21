@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=3 uid="uid://bdwga8uokciao"]
+
+[ext_resource type="Script" path="res://Scripts/menu_options.gd" id="1_x4l7f"]
+[ext_resource type="FontFile" uid="uid://orw6ofq0r5g1" path="res://Assets/Fonts/MainMenu.otf" id="2_bcynj"]
+[ext_resource type="Texture2D" uid="uid://bugygf4omq8ol" path="res://Assets/Textures/Background/MainMenu.png" id="3_q5ene"]
+[ext_resource type="Texture2D" uid="uid://tye3u7qbn1i3" path="res://Assets/Textures/UI/OptionsBox.png" id="4_i41wb"]
+[ext_resource type="Texture2D" uid="uid://dcj6s26xwpxnk" path="res://Assets/Textures/UI/Gameplay.png" id="4_yst0r"]
+[ext_resource type="BitMap" uid="uid://dwpmcckpwhiyw" path="res://Assets/Textures/UI/GameplayMask.png" id="5_5ymoy"]
+[ext_resource type="Texture2D" uid="uid://hiter13q4e8u" path="res://Assets/Textures/UI/Graphics.png" id="7_ddi67"]
+[ext_resource type="BitMap" uid="uid://ce6xrxb3numt8" path="res://Assets/Textures/UI/GraphicsMask.png" id="8_bw33o"]
+[ext_resource type="Texture2D" uid="uid://b1samk0opadc2" path="res://Assets/Textures/UI/Audio.png" id="9_5yd0o"]
+[ext_resource type="BitMap" uid="uid://caqyw4lvoakgl" path="res://Assets/Textures/UI/AudioMask.png" id="10_y8ivt"]
+
+[node name="MenuOptions" type="Node2D"]
+script = ExtResource("1_x4l7f")
+
+[node name="FullscreenToggle" type="CheckButton" parent="."]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 783.0
+offset_top = 309.0
+offset_right = 1257.0
+offset_bottom = 399.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_bcynj")
+theme_override_font_sizes/font_size = 60
+text = "Fullscreen: Off"
+
+[node name="MainMenuBackground" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(960, 540)
+texture = ExtResource("3_q5ene")
+metadata/_edit_lock_ = true
+
+[node name="OptionsBox" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("4_i41wb")
+metadata/_edit_lock_ = true
+
+[node name="GameplayButton" type="TextureButton" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture_normal = ExtResource("4_yst0r")
+texture_click_mask = ExtResource("5_5ymoy")
+metadata/_edit_lock_ = true
+
+[node name="GraphicsButton" type="TextureButton" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture_normal = ExtResource("7_ddi67")
+texture_click_mask = ExtResource("8_bw33o")
+metadata/_edit_lock_ = true
+
+[node name="AudioButton" type="TextureButton" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture_normal = ExtResource("9_5yd0o")
+texture_click_mask = ExtResource("10_y8ivt")
+metadata/_edit_lock_ = true
+
+[connection signal="toggled" from="FullscreenToggle" to="." method="_on_fullscreen_toggle_toggled"]

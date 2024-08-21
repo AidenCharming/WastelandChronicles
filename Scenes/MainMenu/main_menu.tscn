@@ -1,0 +1,71 @@
+[gd_scene load_steps=15 format=3 uid="uid://cdowjefllds2c"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_u02u3"]
+[ext_resource type="PackedScene" uid="uid://by2o71frus2ss" path="res://Scenes/Game/game_scene.tscn" id="2_6klfe"]
+[ext_resource type="Texture2D" uid="uid://bugygf4omq8ol" path="res://Assets/Textures/Background/MainMenu.png" id="3_fss0t"]
+[ext_resource type="PackedScene" uid="uid://bdwga8uokciao" path="res://Scenes/Settings/menu_options.tscn" id="3_wcqm8"]
+[ext_resource type="Texture2D" uid="uid://bnepkbry8d1wo" path="res://Assets/Textures/UI/Continue.png" id="5_v37ki"]
+[ext_resource type="BitMap" uid="uid://dro20vyw5y7t5" path="res://Assets/Textures/UI/ContinueMask.png" id="6_ah0vj"]
+[ext_resource type="Texture2D" uid="uid://kvygfu0aw1wq" path="res://Assets/Textures/UI/NewGame.png" id="6_hvfap"]
+[ext_resource type="Texture2D" uid="uid://c3inuqnhkwgwe" path="res://Assets/Textures/UI/LoadGame.png" id="7_mkvv5"]
+[ext_resource type="Texture2D" uid="uid://cbjafv7b0jxnt" path="res://Assets/Textures/UI/Options.png" id="8_c6t2n"]
+[ext_resource type="BitMap" uid="uid://gjnfdxvqnr2" path="res://Assets/Textures/UI/NewGameMask.png" id="8_rs7yu"]
+[ext_resource type="Texture2D" uid="uid://c2i50cyoqocua" path="res://Assets/Textures/UI/ExitGame.png" id="9_4mt17"]
+[ext_resource type="BitMap" uid="uid://d2cvafup2xpt8" path="res://Assets/Textures/UI/OptionsMask.png" id="9_sgf16"]
+[ext_resource type="BitMap" uid="uid://b47yo1n8e1pgi" path="res://Assets/Textures/UI/ExitGameMask.png" id="10_8w7w7"]
+[ext_resource type="BitMap" uid="uid://cdt4wfs3p2awi" path="res://Assets/Textures/UI/LoadGameMask.png" id="10_772ct"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_u02u3")
+game_scene = ExtResource("2_6klfe")
+menu_options = ExtResource("3_wcqm8")
+
+[node name="MainMenuBackground" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(960, 540)
+texture = ExtResource("3_fss0t")
+metadata/_edit_lock_ = true
+
+[node name="ContinueButton" type="TextureButton" parent="."]
+clip_contents = true
+offset_top = 1.0
+offset_right = 1920.0
+offset_bottom = 1081.0
+texture_normal = ExtResource("5_v37ki")
+texture_click_mask = ExtResource("6_ah0vj")
+metadata/_edit_lock_ = true
+
+[node name="NewGameButton" type="TextureButton" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+texture_normal = ExtResource("6_hvfap")
+texture_click_mask = ExtResource("8_rs7yu")
+metadata/_edit_lock_ = true
+
+[node name="LoadGameButton" type="TextureButton" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+texture_normal = ExtResource("7_mkvv5")
+texture_click_mask = ExtResource("10_772ct")
+metadata/_edit_lock_ = true
+
+[node name="OptionsButton" type="TextureButton" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+texture_normal = ExtResource("8_c6t2n")
+texture_click_mask = ExtResource("9_sgf16")
+metadata/_edit_lock_ = true
+
+[node name="ExitGameButton" type="TextureButton" parent="."]
+clip_contents = true
+offset_right = 8.0
+offset_bottom = 8.0
+texture_normal = ExtResource("9_4mt17")
+texture_click_mask = ExtResource("10_8w7w7")
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="LoadGameButton" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="ExitGameButton" to="." method="_on_exit_game_pressed"]

@@ -1,0 +1,14 @@
+CanvasLayer
+Sprite2D
+MarginContainer
+ColorRect
+TextureRect
+TextureButton
+Button
+Label
+Window
+SubViewport
+LineEdit
+TextEdit
+RichTextLabel
+CheckButton

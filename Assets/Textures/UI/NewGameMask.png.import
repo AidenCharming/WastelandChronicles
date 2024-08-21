@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://gjnfdxvqnr2"
+path="res://.godot/imported/NewGameMask.png-cd0eca9409d43ff46484ad48c212321d.res"
+
+[deps]
+
+source_file="res://Assets/Textures/UI/NewGameMask.png"
+dest_files=["res://.godot/imported/NewGameMask.png-cd0eca9409d43ff46484ad48c212321d.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
