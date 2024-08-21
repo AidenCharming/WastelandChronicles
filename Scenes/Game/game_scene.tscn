@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://by2o71frus2ss"]
 
-[ext_resource type="Texture2D" uid="uid://de3wagm0iogwa" path="res://Assets/Textures/Background/GameBackground.png" id="1_ap4nr"]
+[ext_resource type="Texture2D" uid="uid://cvoal314kjfvv" path="res://Assets/Textures/Background/GameBackground.png" id="1_ap4nr"]
 [ext_resource type="Script" path="res://Scripts/Game/main_camera.gd" id="1_aufkt"]
 
 [node name="GameArea" type="Node2D"]

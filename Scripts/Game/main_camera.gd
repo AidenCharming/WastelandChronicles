@@ -43,5 +43,4 @@ func handle_mouse_drag(delta: float) -> void:
 			last_mouse_position = mouse_position
 
 func _ready() -> void:
-	# Assuming the background sprite's position needs to be centered and snapped
-	$BackgroundSprite.position = round($BackgroundSprite.position)
+	pass
