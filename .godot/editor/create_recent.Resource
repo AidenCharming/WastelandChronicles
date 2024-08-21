@@ -1,3 +1,0 @@
-BitMap
-FontFile
-SystemFont
