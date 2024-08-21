@@ -1,0 +1,10 @@
+# Godot specific ignores
+.godot/
+.import/
+export_presets.cfg
+
+# Avoid tracking the main project file
+project.godot
+
+# System specific files
+.DS_Store
