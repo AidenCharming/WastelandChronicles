@@ -7,10 +7,15 @@ var fullscreen = Settings.fullscreen
 var fullscreen_toggle = load("$res://menu_options.tscn/fullscreen_toggle")
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready():
+	await get_tree().process_frame
 	DisplayServer.window_set_position(Vector2(1000, 100))
+	
+	# Explicitly call CursorManager's method
 	CursorManager.show_cursor()
 	
+		# Continue with the rest of the main menu setup...
+
 	# Ensure that Settings singleton is loaded
 	if Settings:
 		Settings.load_settings()

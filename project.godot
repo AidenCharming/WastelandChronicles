@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Settings="*res://Scripts/settings.gd"
 CursorManager="*res://Scripts/Managers/cursor_manager.gd"
+Settings="*res://Scripts/settings.gd"
 
 [display]
 
