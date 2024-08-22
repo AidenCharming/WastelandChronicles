@@ -10,4 +10,4 @@ func _ready():
 func update_card_data():
 	$NameLabel.text = card_name
 
-	var portrait_sprite = $SurvivorPortrait
+	var _portrait_sprite = $SurvivorPortrait

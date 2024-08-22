@@ -1,25 +1,45 @@
 extends Control
 
 @export var drag_sensitivity: float = 1.0
-@export var lerp_factor: float = 0.5  # Increase for faster response
+@export var lerp_factor: float = 0.2  # Smoothness factor for movement
 
 var is_dragging = false
 var drag_offset = Vector2.ZERO
 var target_position: Vector2
+var card: Sprite2D  # Reference to the Card node as Sprite2D
 
 func _ready():
-	target_position = position
+	card = $SurvivorCard  # Initialize card reference with the correct node name
+	if card:
+		print("SurvivorCard node successfully initialized.")
+		# Initialize target_position based on card's position
+		target_position = card.position
+	else:
+		print("Error: SurvivorCard node not found. Check if the node named 'SurvivorCard' exists and is correctly named.")
 
-func _gui_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			is_dragging = true
-			drag_offset = position - event.position
-		elif event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
-			is_dragging = false
-	elif event is InputEventMouseMotion and is_dragging:
-		target_position = event.position + drag_offset * drag_sensitivity
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				if card and is_point_in_sprite(card, get_viewport().get_mouse_position()):
+					is_dragging = true
+					# Calculate drag offset correctly
+					drag_offset = card.position - get_viewport().get_mouse_position()
+				else:
+					print("Click outside card detected. Event position: ", event.position)
+			else:
+				if is_dragging:  # Only reset if dragging was active
+					is_dragging = false
 
-func _process(delta: float) -> void:
-	if is_dragging:
-		position = position.lerp(target_position, lerp_factor)
+func _process(_delta: float) -> void:
+	if is_dragging and card:
+		# Calculate the target position based on mouse position and drag offset
+		target_position = get_viewport().get_mouse_position() + drag_offset
+		# Smoothly move the card to the target position
+		card.position = card.position.lerp(target_position, lerp_factor)
+
+# Utility function to check if a point is within a Sprite2D's area
+func is_point_in_sprite(sprite: Sprite2D, point: Vector2) -> bool:
+	var rect = sprite.get_rect()
+	var local_point = sprite.to_local(point)
+	return rect.has_point(local_point)

@@ -14,7 +14,6 @@ func _ready() -> void:
 			print("FullscreenToggle node not found")
 
 func update_fullscreen_toggle() -> void:
-	var fullscreen_toggle = $FullscreenToggle
 	if fullscreen_toggle:
 		fullscreen_toggle.set_pressed(Settings.fullscreen)
 		fullscreen_toggle.text = "Fullscreen: " + ("On" if Settings.fullscreen else "Off")
