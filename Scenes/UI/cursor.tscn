@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://fh7vq5rsgiap"]
+
+[ext_resource type="Script" path="res://Scripts/UI/cursor.gd" id="1_h3eyp"]
+[ext_resource type="Texture2D" uid="uid://beh0ov0fj2jql" path="res://Assets/Textures/UI/Cursor.png" id="2_wtrfl"]
+
+[node name="Cursor" type="Control"]
+z_index = 1000
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_h3eyp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_wtrfl")

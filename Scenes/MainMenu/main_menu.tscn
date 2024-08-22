@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://cdowjefllds2c"]
+[gd_scene load_steps=15 format=3 uid="uid://cdowjefllds2c"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_u02u3"]
 [ext_resource type="PackedScene" uid="uid://by2o71frus2ss" path="res://Scenes/Game/game_scene.tscn" id="2_6klfe"]
+[ext_resource type="PackedScene" uid="uid://bdwga8uokciao" path="res://Scenes/Settings/menu_options.tscn" id="3_0bvjw"]
 [ext_resource type="Texture2D" uid="uid://x10370qnvvet" path="res://Assets/Textures/Background/MainMenu.png" id="3_fss0t"]
 [ext_resource type="Texture2D" uid="uid://bqeuetr6t48lf" path="res://Assets/Textures/UI/Continue.png" id="5_v37ki"]
 [ext_resource type="BitMap" uid="uid://wgimp4kj7w83" path="res://Assets/Textures/UI/ContinueMask.png" id="6_ah0vj"]
@@ -17,6 +18,7 @@
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_u02u3")
 game_scene = ExtResource("2_6klfe")
+menu_options = ExtResource("3_0bvjw")
 
 [node name="MainMenuBackground" type="Sprite2D" parent="."]
 z_index = -1

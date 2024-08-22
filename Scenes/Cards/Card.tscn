@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b36b8cfljhchh"]
+[gd_scene load_steps=7 format=3 uid="uid://b36b8cfljhchh"]
 
 [ext_resource type="Texture2D" uid="uid://kqcm03tbso5l" path="res://Assets/Textures/Cards/SurvivorCard.png" id="1_2dxnb"]
+[ext_resource type="Script" path="res://Scripts/Managers/card_movement.gd" id="1_7dorl"]
 [ext_resource type="Script" path="res://Scripts/Managers/card.gd" id="2_4rjn4"]
 [ext_resource type="Texture2D" uid="uid://daeylrn2my8ql" path="res://Assets/Textures/Cards/SurvivorPortrait2.png" id="2_jyyco"]
 [ext_resource type="Theme" uid="uid://bmtaahptfre60" path="res://Assets/Themes/new_theme.tres" id="3_nft82"]
@@ -19,7 +20,7 @@ offset_right = 94.4399
 offset_bottom = 126.88
 grow_horizontal = 2
 grow_vertical = 2
-mouse_default_cursor_shape = 13
+script = ExtResource("1_7dorl")
 
 [node name="SurvivorCard" type="Sprite2D" parent="."]
 z_index = 1
@@ -27,9 +28,6 @@ position = Vector2(59, 81)
 scale = Vector2(0.181538, 0.181538)
 texture = ExtResource("1_2dxnb")
 script = ExtResource("2_4rjn4")
-card_name = null
-card_type = null
-attributes = null
 
 [node name="SurvivorPortrait" type="Sprite2D" parent="SurvivorCard"]
 z_index = -1

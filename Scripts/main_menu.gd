@@ -9,11 +9,12 @@ var fullscreen_toggle = load("$res://menu_options.tscn/fullscreen_toggle")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	DisplayServer.window_set_position(Vector2(1000, 100))
+	CursorManager.show_cursor()
+	
 	# Ensure that Settings singleton is loaded
 	if Settings:
 		Settings.load_settings()
 		
-		# Check if the node exists before accessing it
 		if fullscreen_toggle:
 			fullscreen_toggle.set_pressed(fullscreen)
 			Settings.apply_settings()
