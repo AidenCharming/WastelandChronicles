@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://by2o71frus2ss"]
+[gd_scene load_steps=4 format=3 uid="uid://by2o71frus2ss"]
 
 [ext_resource type="Texture2D" uid="uid://cvoal314kjfvv" path="res://Assets/Textures/Background/GameBackground.png" id="1_ap4nr"]
 [ext_resource type="Script" path="res://Scripts/Game/game_area.gd" id="1_q83rx"]
+[ext_resource type="Script" path="res://Scripts/Game/main_camera.gd" id="2_xy2j4"]
 
 [node name="Control" type="Node2D"]
 script = ExtResource("1_q83rx")
@@ -9,6 +10,7 @@ script = ExtResource("1_q83rx")
 [node name="MainCamera" type="Camera2D" parent="."]
 z_index = 1
 anchor_mode = 0
+script = ExtResource("2_xy2j4")
 
 [node name="BackgroundSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_ap4nr")

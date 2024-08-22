@@ -10,14 +10,14 @@
 [node name="Control" type="Control"]
 z_index = 5
 layout_mode = 3
-anchor_left = 0.468
-anchor_top = 0.414
-anchor_right = 0.468
-anchor_bottom = 0.414
-offset_left = -22.5601
-offset_top = -36.12
-offset_right = 94.4399
-offset_bottom = 126.88
+anchor_left = 0.487
+anchor_top = 0.456
+anchor_right = 0.487
+anchor_bottom = 0.456
+offset_left = -59.0402
+offset_top = -81.48
+offset_right = 57.9598
+offset_bottom = 81.52
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7dorl")
@@ -37,10 +37,12 @@ texture = ExtResource("2_jyyco")
 
 [node name="NameLabel" type="Label" parent="SurvivorCard"]
 anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.131
 anchor_right = 0.5
 anchor_bottom = 0.131
-offset_left = -281.0
-offset_top = -402.0
+offset_left = -606.0
+offset_top = -520.817
 offset_right = -61.0
 offset_bottom = -441.817
 theme = ExtResource("3_nft82")

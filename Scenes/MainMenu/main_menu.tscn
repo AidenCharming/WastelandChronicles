@@ -21,7 +21,6 @@ game_scene = ExtResource("2_6klfe")
 menu_options = ExtResource("3_0bvjw")
 
 [node name="MainMenuBackground" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(960, 540)
 texture = ExtResource("3_fss0t")
 metadata/_edit_lock_ = true
